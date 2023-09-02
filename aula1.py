@@ -1,6 +1,6 @@
 """
 DocString: Permite escrever
- em diversas 
+em diversas 
 linhas.
 """
 # Permite escrever um comentário
