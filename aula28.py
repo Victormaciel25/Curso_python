@@ -26,14 +26,14 @@ if not nome or not idade:
     print("Desculpe, você deixou campos vazios.")
 else:
     print(f'Seu nome é {nome}')
-    print(f'Seu nome invertido é {nome[-1:-10:-1]}')
+    print(f'Seu nome invertido é {nome[::-1]}')
     if tem_espaços(nome):
         print('Seu nome contém espaços')
     else:
         print('Seu nome não contém espaços')
     print('Seu nome tem ',len(nome),' letras.')
     print('A primeira letra do seu nome é ',(nome[0]))
-    print('A ultima letra do seu nome é ',(nome[5]))
+    print('A ultima letra do seu nome é ',(nome[-1]))
 
 
 
