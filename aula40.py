@@ -1,8 +1,9 @@
 """ Calculadora com while """
 while True:
     numero_1 = input('Digite um número: ')
-    numero_2 = input('Digite outro número: ')
     operador = input('Digite o operador (+-/*): ')
+    numero_2 = input('Digite outro número: ')
+    
 
     numeros_validos = None
 
@@ -27,7 +28,18 @@ while True:
         print('Digite apenas um operador.')
         continue
 
+    print('Realizando sua conta. Confira o resultado abaixo:')
 
+    if operador == '+':
+        print(f'{num_1_float} + {num_2_float}=', num_1_float + num_2_float)
+    elif operador == '-':
+        print(f'{num_1_float} - {num_2_float}=',num_1_float - num_2_float)
+    elif operador == '/':
+        print(f'{num_1_float} / {num_2_float}=',num_1_float / num_2_float)
+    elif operador == '*':
+        print(f'{num_1_float} * {num_2_float}=',num_1_float * num_2_float)
+    else:
+        print('Nunca deveria chegar aqui.')
     sair = input('Quer sair? [s]im:').lower().startswith('s')
     
     if sair is True:
