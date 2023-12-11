@@ -9,7 +9,10 @@ Exiba os índices da lista
 lista = ['Maria', 'Helena', 'Luiz']
 lista.append('João')
 
-indices = range(len(lista))
+lista_enumerada = list(enumerate(lista))
+# for indice, nome in enumerate(lista):
+#     indice, nome = item
+#     print(indice, nome)
 
-for indice in indices:
-    print(indice, lista[indice], type(lista[indice]))
+print(lista_enumerada)
+
