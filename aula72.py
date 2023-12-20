@@ -7,3 +7,28 @@
 
 # Crie uma função fala se um número é par ou ímpar.
 # Retorne se o número é par ou ímpar.
+
+import os
+
+def mult(*args):
+    total = 1
+    for numero in args:
+        total *= int(numero)
+    return total
+
+print('Selecione uma opção')
+opcao = input('[i]nserir [P]arar')
+
+total = 1
+
+while True:
+    if opcao == 'i':
+        os.system('cls')
+        total = mult(input('Valor: '), total)
+        opcao = input('[i]nserir [P]arar')
+    elif opcao == 'p':
+        print(total)
+        print('Você encerrou a multiplicação.')
+        break
+    else:
+        print('Selecione [i]nserir ou [P]arar')
