@@ -32,3 +32,8 @@ while True:
         break
     else:
         print('Selecione [i]nserir ou [P]arar')
+    
+if total % 2 == 0:
+    print('O numero é par')
+else:
+    print('O numero é impar')
