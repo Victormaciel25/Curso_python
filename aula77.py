@@ -17,7 +17,19 @@ perguntas = [
         'Resposta': '5', 
     },
 ]
-
+cont = 0
 for pergunta in perguntas:
-    print(perguntas['Pergunta']),
-    print(perguntas['Opções'])
+    print(('Pergunta: ') + pergunta['Pergunta'])
+    contador = 1
+    print('Opção:')
+    for opcao in pergunta['Opções']:
+        print(str(contador) + ')' + opcao)
+        contador += 1       
+    resp = input('Escolha uma opção: ')
+    if resp == pergunta['Resposta']:
+        print('Acertou')
+        cont += 1
+    else:
+        print('Errou')
+
+print('Você acertou ' + str(cont) + ' de 3 perguntas.')
