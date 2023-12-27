@@ -32,4 +32,4 @@ for pergunta in perguntas:
     else:
         print('Errou')
 
-print('Você acertou ' + str(cont) + ' de 3 perguntas.')
+print('Você acertou ' + str(cont) + ' de ', len(perguntas), 'perguntas.')
