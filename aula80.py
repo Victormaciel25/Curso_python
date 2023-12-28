@@ -23,3 +23,23 @@ lista_de_listas_de_inteiros = [
     [5, 3, 1, 8, 5, 7, 1, 8, 8, 7],
     [10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
 ]
+
+def encontra_primeiro_duplicado(lista):
+    # Crie um conjunto vazio para rastrear os números únicos
+    numeros_unicos = set()
+    
+    for numero in lista:
+        if numero in numeros_unicos:
+            # Se o número já estiver no conjunto, é um duplicado
+            return numero
+        else:
+            # Caso contrário, adicione-o ao conjunto de números únicos
+            numeros_unicos.add(numero)
+    
+    # Se nenhum duplicado for encontrado, retorne -1
+    return -1
+
+# Teste a função com as listas de exemplo
+for lista in lista_de_listas_de_inteiros:
+    resultado = encontra_primeiro_duplicado(lista)
+    print(f"Lista: {lista}, Duplicado: {resultado}")
