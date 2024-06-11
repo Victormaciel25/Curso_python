@@ -9,6 +9,9 @@ TABLE_NAME = 'customers'
 connection = sqlite3.connect(DB_FILE)
 cursor = connection.cursor()
 
+# CRUD - Create Read    Update  Delete
+# SQL -  INSERT SELECT  UPDATE  DELETE
+
 # CUIDADO: fazendo delete sem where
 cursor.execute(
     f'DELETE FROM {TABLE_NAME}'
@@ -45,7 +48,9 @@ cursor.executemany(
         )
     )
 connection.commit()
-print(sql)
 
-cursor.close()
-connection.close()
+if __name__ == '__main__':
+    print(sql)
+
+    cursor.close()
+    connection.close()
